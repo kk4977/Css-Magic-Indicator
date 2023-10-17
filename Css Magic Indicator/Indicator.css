@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+} 
+
+body{
+background:#222327;        
+font-family: 'poppins', sans-serif;
+}
+
+.navigation{
+height:70px;    
+width:370px;
+background:#2f2f2f;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+display:flex;
+align-items:center;
+padding-left:15px;
+padding-right:15px;
+}
+
+.navigation li{
+list-style:none;   
+height:70px;
+width:70px;
+text-align:center;
+color:white;
+float:left;
+z-index:1;
+cursor:pointer;
+}
+
+.navigation li a{
+color:white;    
+font-size:20px;
+position:relative;
+top:22px;
+transition:all .2s;
+pointer-events:none;
+}
+
+.navigation li p{
+margin-top:35px;        
+font-size:12px;
+opacity:0;
+transition:all .2s;
+pointer-events:none;
+}
+
+.navigation .marker{
+width:55px; 
+height:55px;
+background:#6840C5;
+border:7px solid #222327;
+position:absolute;
+transform:rotate(45deg);
+top:-30px;
+left:21px;
+transition:all .2s;
+}
+
+.navigation li.active a{
+top:-15px;
+font-size:18px;
+transition:all .2s;
+}
+
+.navigation li.active p{
+opacity:1; 
+margin-top:15px;
+transition:all .2s;
+}
+
+.navigation li:nth-child(1).active ~ .marker{
+left:21px;  
+transition:all .2s;
+transform:rotate(45deg);
+}
+
+.navigation li:nth-child(2).active  ~ .marker{
+left:90px; 
+transition:all .2s;
+transform:rotate(135deg);
+}
+
+.navigation li:nth-child(3).active  ~ .marker{
+left:157px;  
+transition:all .2s;
+transform:rotate(225deg);
+}
+
+.navigation li:nth-child(4).active  ~ .marker{
+left:225px;
+transition:all .2s; 
+transform:rotate(315deg);
+}
+
+.navigation li:nth-child(5).active  ~ .marker{
+left:293px;
+transition:all .2s; 
+transform:rotate(405deg);
+}
